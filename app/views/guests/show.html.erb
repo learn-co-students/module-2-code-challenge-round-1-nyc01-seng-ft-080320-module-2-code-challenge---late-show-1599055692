@@ -13,7 +13,7 @@
 </div>
 
 List of Episode Appearances: 
-<ul><% @guest.appearances.each do |appr| %>
+<ul><% @guest.sorted_appearances.each do |appr| %>
     <li><%= link_to(appr.episode.date, episode_path(appr.episode)) %> which has a rating of <%= appr.rating %></li>
 <% end %>
 </ul>
