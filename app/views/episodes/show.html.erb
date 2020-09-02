@@ -1,0 +1,14 @@
+<!-- 
+    I know the deliverables didn't require showing the episode
+    number but I wanted to make it look nicer, hope that's ok
+-->
+<h1>Episode <%= @episode.number %></h1>
+<p>Episode aired on: <%= @episode.date %></p>
+<p>Average rating: <%= @episode.average_rating %></p>
+
+<h3>Guests on this episode:</h3>
+<ul>
+  <% @episode.guests.each do |guest| %>
+    <li><%= link_to guest.name, guest_path(guest) %></li>
+  <% end %>
+</ul>
