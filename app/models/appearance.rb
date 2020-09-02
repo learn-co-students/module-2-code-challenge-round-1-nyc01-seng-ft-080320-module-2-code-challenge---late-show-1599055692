@@ -6,7 +6,7 @@ class Appearance < ApplicationRecord
   validate :guest_appears_once
 
   def guest_appears_once
-    if Appearance.find_by(guest: guest_id, episode: episode_id) != nil
+    if Appearance.find_by(guest: self.guest_id, episode: self.episode_id) != nil
       errors.add(:guest, "can't be on the same episode twice")
     end
   end

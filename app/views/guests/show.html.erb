@@ -1,7 +1,7 @@
 <h1><%= @guest.name + ", " + @guest.occupation.capitalize %></h1>
 <b>Episode List:</b>
 <ul>
-<% @guest.appearances.each do |a| %>
+<% @guest.show_rating.each do |a| %>
     <li><b>Date:</b> <%= link_to a.episode.date, episode_path(a.episode) %><br>
     <b>Rating:</b> <%= a.rating %></li><br>
 <% end %>

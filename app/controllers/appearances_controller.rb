@@ -5,7 +5,9 @@ class AppearancesController < ApplicationController
 
     def create
         @appearance = Appearance.create(appearance_params)
-        if @appearance.valid?
+        # byebug
+        # .valid? not working with custom validation for some reason. I haven't used customs enough.
+        if @appearance.id?
             redirect_to episode_path(@appearance.episode.id)
         else
             flash[:my_errors] = @appearance.errors.full_messages
