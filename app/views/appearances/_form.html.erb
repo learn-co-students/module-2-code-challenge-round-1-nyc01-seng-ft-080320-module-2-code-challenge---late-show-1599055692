@@ -1,0 +1,20 @@
+<h1>Appearance Form</h1>
+
+ <% if !!flash[:errors] %>
+2  <% flash[:errors].each do |e| %>
+3    <p><%= e %></p> <br>
+4    <% end %>
+5  <% end %>
+
+<%= form_for @appearance do |f| %>
+    <%= f.label "Guest Name"%>
+    <%= f.collection_select :guest_id, @guests, :id, :name %><br>
+
+    <%= f.label "Episode"%>
+    <%= f.collection_select :episode_id, @episodes, :id, :number %><br>
+
+    <%= f.label "Rating" %>
+    <%= f.number_field :rating, { min: 1, max: 5 } %><br>
+
+    <%= f.submit%>
+<% end %>
