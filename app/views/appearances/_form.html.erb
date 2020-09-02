@@ -1,0 +1,31 @@
+<h1>New Appearance Form</h1>
+<hr>
+<br>
+
+    <% if flash[:errors] %>
+        <% flash[:errors].each do |e| %>
+            <%= e %><br>
+            <br>
+        <% end %>
+    <% end %>
+
+<%= form_for @appearance do |a| %>
+    <%= a.label :guest %>    
+    <%= a.collection_select :guest_id, @guests, :id, :name %><br>
+    <br>
+    <%= a.label :episode %>
+    <%= a.collection_select :episode_id, @episodes, :id, :number %><br>
+    <br>
+    <%= a.label :rating %>
+    <!--# a.number_field :rating, min: 0, max: 5 %><br> What I had before getting to the validation's deliverable. This way seems like better UX.-->
+    <%= a.number_field :rating %><br>
+    <br>
+    <%= a.submit %>
+<% end %><br>
+<br>
+<hr>
+<br>
+
+<%= button_to "Guests", guests_path, method: :get %>
+<br>
+<%= button_to "Episodes", episodes_path, method: :get %>
