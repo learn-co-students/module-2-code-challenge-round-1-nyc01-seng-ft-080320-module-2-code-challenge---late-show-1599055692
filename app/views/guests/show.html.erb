@@ -1,0 +1,9 @@
+<h1><%= @guest.name %>'s Profile Page:</h1>
+<h3>Episodes Appearances:</h3>
+<ul>
+<% @sorted_list.each do |a| %>
+    <li> <%= "Date: " %><%= link_to a.episode.date, episode_path(a.episode) %><%=  %><%= " Rating: #{a.rating} Episode-Number: #{a.episode.number}" %></li>
+<% end %>
+</ul>
+
+<p><%= button_to "ADD guests to shows", new_appearance_path, method: :get %></p>
