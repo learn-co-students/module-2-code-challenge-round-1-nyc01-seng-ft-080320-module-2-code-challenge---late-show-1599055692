@@ -1,5 +1,10 @@
-<h1> Episodes Show Page:</h1>
+<h1> Episode <%= @episode.number %> Show Page Page:</h1>
 <p>Date: <%= @episode.date %></p>
+<p>Avg Rating: <%= @episode.avg_rating %></p>
+
+<h3>GUESTS:</h3>
 <% @episode.guests.each do |g| %>
     <p><%= link_to g.name, guest_path(g) %></p>
 <% end %>
+
+<p><%= button_to "ADD guests to shows", new_appearance_path, method: :get %></p>

@@ -4,4 +4,6 @@ class Appearance < ApplicationRecord
 
     validates :rating, numericality: { greater_than: 0 }
     validates :rating, numericality: { less_than: 6 }
+    validates :guest_id, uniqueness: { scope: :episode_id,
+    message: "One Guest per Sode!" }
 end

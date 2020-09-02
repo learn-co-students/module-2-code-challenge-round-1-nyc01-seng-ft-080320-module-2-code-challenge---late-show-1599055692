@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 ###
 Guest.destroy_all
+Appearance.destroy_all
+Episode.destroy_all
 
 require 'csv'
 
