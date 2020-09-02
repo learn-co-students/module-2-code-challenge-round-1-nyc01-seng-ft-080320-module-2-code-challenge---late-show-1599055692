@@ -10,7 +10,7 @@ class ApperancesController < ApplicationController
         @apperance = Apperance.create(apperance_params)
 
         if @apperance.valid?
-            redirect_to apperance_path(@apperance)
+            redirect_to episode_path(@apperance.episode)
         else 
             flash[:my_errors] = @apperance.errors.full_messages
             redirect_to new_apperance_path

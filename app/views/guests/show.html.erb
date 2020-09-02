@@ -2,9 +2,18 @@
 
 <h3> Guest Name: <%= @guest.name %> </h3>
 <h3> Episode Apperances: </h3>
+
 <% @guest.apperances.each do |apperance| %>
     <h4>Episode Date: <%= link_to apperance.episode.date, episode_path(apperance.episode) %></h4>
     <h4>Rating: <%= apperance.rating %></h4>
+<% end %>
+
+<h3> Episodes by rating </h3>
+<% @sorted_apperances.each do |x| %>
+   <% x.each do |y| %>
+       <p><%=  y %><p><br>
+    
+    <% end %>
 <% end %>
 
 

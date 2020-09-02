@@ -6,5 +6,6 @@ class GuestsController < ApplicationController
 
   def show 
     @guest = Guest.find(params[:id])
+    @sorted_apperances = @guest.sort_apperances
   end 
 end
