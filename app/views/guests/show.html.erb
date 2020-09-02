@@ -1,0 +1,25 @@
+<h1>Guest Profile:</h1>
+
+
+<div>
+    <table>
+        <tr>
+            <td>Guest name</td>
+            <td>:</td>
+            <td><%= @guest.name %></td>
+        </tr>
+        <tr>
+            <td>Guest occupation</td>
+            <td>:</td>
+            <td><%= @guest.occupation %></td>
+        </tr>
+        <tr>
+            <td valign="top">Episodes they appeared in</td>
+            <td valign="top">:</td>
+            <td><% @guest.appearances.each do |appearance| %><li><%= link_to appearance.episode.date, episode_path(appearance.episode)%><p><%= "\tRating [#{appearance.rating}]" %></p></li>
+                <% end %>
+            </td>
+        </tr>
+
+    </table>
+</div>

@@ -14,8 +14,8 @@
             <td><%= @episode.date %></td>
         </tr>
         <tr>
-            <td>Hosted Guests</td>
-            <td>:</td>
+            <td valign="top">Hosted Guests</td>
+            <td valign="top">:</td>
             <td><% @episode.guests.each do |guest| %><li><%= link_to guest.name, guest_path(guest)%></li>
                 <% end %>
             </td>
