@@ -118,14 +118,14 @@ Each Episode date should link to the show page for that Episode. -->
 
 ### 6. Advanced: Additional Appearance Validation
 
-A Guest should only appear on a given Episode once.
+<!-- A Guest should only appear on a given Episode once.
 
 - Add a validation to Appearance to ensure that each Guest can only appear once on the same Episode.
-- Update the error handling on the Appearance creation form to show this validation error.
+- Update the error handling on the Appearance creation form to show this validation error. -->
 
-### 7. Advanced: Episode Average Rating
+<!-- ### 7. Advanced: Episode Average Rating
 
-On the Episode show page, show the average rating of the Appearances for the episode.
+On the Episode show page, show the average rating of the Appearances for the episode. -->
 
 ### 8. Advanced: Guest Show Page Appearance Ordering
 
