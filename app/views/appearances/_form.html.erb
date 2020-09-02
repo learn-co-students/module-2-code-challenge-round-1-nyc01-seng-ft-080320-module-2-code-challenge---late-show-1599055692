@@ -1,0 +1,31 @@
+<h3>Form for Appearance</h3>
+
+<% if flash[:my_errors] %>
+    <h3><%= pluralize(flash[:my_errors].count, "error") %> stopped this appearance from being logged:</h3>
+    <ul>
+        <% flash[:my_errors].each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+    </ul>
+    <% end %>
+
+
+<%= form_for @appearance do |f| %>
+
+    <div><h3><%= f.label :guest %></h3>
+    <%= f.collection_select :guest_id, @guests, :id, :name %>
+    </div>
+
+    <div><h3><%= f.label "Episode Date:" %></h3>
+    <%= f.collection_select :episode_id, @episodes, :id, :date %>
+    </div>
+
+    <div><h3><%= f.label "Rating: (1-5)" %></h3>
+    <%= f.number_field :rating %>
+    </div>
+
+    <div>
+    <p><%= f.submit %></p>
+    </div>
+
+<% end%>

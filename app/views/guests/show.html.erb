@@ -1,0 +1,24 @@
+<h1>Guest Show Page</h1>
+
+<div>Guest Name:
+<h3><%= @guest.name %></h3>
+</div>
+
+<div>Guest Occupation:
+<h3><%= @guest.occupation %></h3>
+</div>
+
+<div>
+<%= button_to("Add Appearance", new_appearance_path, method: :get) %><br>
+</div>
+
+List of Episode Appearances: 
+<ul><% @guest.appearances.each do |appr| %>
+    <li><%= link_to(appr.episode.date, episode_path(appr.episode)) %> which has a rating of <%= appr.rating %></li>
+<% end %>
+</ul>
+
+
+<div>
+    <%= button_to("Back to Guest Index", guests_path, method: :get) %><br>
+</div>
