@@ -1,3 +1,5 @@
+# Vincent Collis
+
 # Rails Code Challenge - Late Show
 
 For this assessment, you'll be working with Late Night TV show domain.
