@@ -11,9 +11,9 @@ class AppearancesController < ApplicationController
             redirect_to episode_path(appearance.episode_id)
         else
 
-            flash[:my_errors] = @guest.errors.full_messages
-            @guest = Guest.new
-            redirect_to new_guest_path
+            flash[:my_errors] = @appearance.errors.full_messages
+            @appearance = Appearance.new
+            redirect_to new_appearance_path
         end
     end
     
