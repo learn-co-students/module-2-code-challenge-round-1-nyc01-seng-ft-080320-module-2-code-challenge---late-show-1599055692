@@ -1,9 +1,10 @@
 <h1><%= @guest.name %></h1>
 <h3>Occupation:</h3>
-<p><%= @guest.occupation %></p>
+<p><%= @guest.occupation.capitalize %></p>
 <h3>Appeared in:</h3>
+<%= button_to "Highest Rated First", guest_path, method: :get, params: {sort: "rating"} %>
 <ul>
-    <% @guest.appearances.each do |appearance| %>
+    <% @appearances.each do |appearance| %>
         <li><%= link_to appearance.episode.date, episode_path(appearance.episode) %> <%= "Episode Number: #{appearance.episode.number} Rated: #{appearance.rating}"  %> </li>
     <% end %>
 </ul>
