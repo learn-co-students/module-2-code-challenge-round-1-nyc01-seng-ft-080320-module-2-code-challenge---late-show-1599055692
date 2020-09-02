@@ -1,7 +1,12 @@
 <h1>All The Guests</h1>
+<%= button_to "Episodes", episodes_path, method: :get %>
+<br>
+<%= button_to "Make an Appearance", new_appearance_path, method: :get %>
+<br>
+<hr>
 
 <ul>
   <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    <li><%= link_to guest.name, guest_path(guest) %></li>
   <% end %>
 </ul>

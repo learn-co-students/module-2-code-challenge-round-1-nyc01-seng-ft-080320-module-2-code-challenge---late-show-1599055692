@@ -1,0 +1,19 @@
+<h1><%= @guest.name %></h1>
+<hr>
+<br>
+<b>You may have seen <%= @guest.name %> on these memorable episodes:</b><br>
+<br>
+    <ul>
+        <% @guest.appearances.each do |a| %>
+            <li>Aired on <%= link_to a.episode.date.strftime("%B %d, %Y"), episode_path(a.episode) %> with a rating of <%= a.rating %> </li>
+        <% end %>
+    </ul>
+<br>
+<hr>
+<br>
+
+<%= button_to "Guests", guests_path, method: :get %>
+<br>
+<%= button_to "Episodes", episodes_path, method: :get %>
+<br>
+<%= button_to "Make an Appearance", new_appearance_path, method: :get %>

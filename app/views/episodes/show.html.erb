@@ -1,0 +1,19 @@
+<h1>Episode Number <%= @episode.number %></h1>
+<hr>
+<br>
+<b>Aired on: <%= @episode.date.strftime("%B %d, %Y") %></b><br>
+<br>
+<b>Guests on this Episode:</b>
+    <ul>
+        <% @episode.guests.each do |g| %>
+            <li><%= link_to g.name, guest_path(g) %></li>
+        <% end %>
+    </ul>
+<br>
+<hr>
+<br>
+
+<%= button_to "Guests", guests_path, method: :get %>
+<br>
+<%= button_to "Episodes", episodes_path, method: :get %>
+
