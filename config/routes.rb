@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :episodes
   resources :appearances
 
+  get '/episodes/:id', to: 'episodes#show', as: "episode_path"
   
 end

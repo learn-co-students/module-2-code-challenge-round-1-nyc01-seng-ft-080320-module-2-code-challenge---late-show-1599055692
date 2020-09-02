@@ -1,1 +1,10 @@
-<h1>All Appearance</h1>
+<h1>All Appearances</h1>
+
+
+<% @appearances.each do |appearance| %>
+<%= appearance.episode.date %>, 
+  <%= appearance.guest.name %>
+  <br>
+  <% end %>
+
+

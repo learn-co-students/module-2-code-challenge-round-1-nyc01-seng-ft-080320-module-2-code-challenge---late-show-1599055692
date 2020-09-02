@@ -14,7 +14,12 @@ class AppearancesController < ApplicationController
 
     def create
         @appearance = Appearance.create(appearance_params)
+        if @appearance.valid?
         redirect_to episode_path(@appearance.episode_id)
+        else 
+            flash[:my_errors] = @appearance.errors.full_messages
+            redirect_to new_appearance_path
+        end
     end
 
     def edit

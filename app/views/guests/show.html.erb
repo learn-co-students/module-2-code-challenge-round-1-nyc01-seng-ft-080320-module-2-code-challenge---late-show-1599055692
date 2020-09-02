@@ -1,1 +1,21 @@
-<h1>Show Guest</h1>
+<h1> <%= @guest.name %></h1>
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+This guest has appeared on the following episodes: 
+<br>
+<br>
+<% @guest.episodes.each do |episode| %>
+    <%= link_to episode.date, episode_path(episode)%> 
+    Rating:
+    <% episode.appearances.select do |appearance| %>
+        <% if appearance.guest == @guest %>
+        <%= appearance.rating %>
+        <% end %>
+    <% end %>
+<br>
+<br>
+<% end %>

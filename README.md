@@ -94,9 +94,9 @@ xAfter submitting the form, the user should be redirected to the selected episod
 
 On the episode show page, a user should see:
 
-- Episode date
-- A list of the guests who were on that episode
-- Each guest's name should link to the Guest Show page
+xEpisode date
+x A list of the guests who were on that episode
+x Each guest's name should link to the Guest Show page
 
 ### 4. Guest Show Page Episode links
 
@@ -104,8 +104,8 @@ On the Guest show page, add a list of the Episodes the Guest has appeared on.
 
 For each Episode, show the:
 
-- date of the Episode
-- rating for the Appearance
+x date of the Episode
+x rating for the Appearance
 
 Each Episode date should link to the show page for that Episode.
 
@@ -113,9 +113,9 @@ Each Episode date should link to the show page for that Episode.
 
 The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` are okay).
 
-- Add a validation to ensure that the rating is between 1 and 5.
-- Add handling for this error to the Appearance create action.
-- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
+x Add a validation to ensure that the rating is between 1 and 5.
+x Add handling for this error to the Appearance create action.
+x The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
 
 ### 6. Advanced: Additional Appearance Validation
 
