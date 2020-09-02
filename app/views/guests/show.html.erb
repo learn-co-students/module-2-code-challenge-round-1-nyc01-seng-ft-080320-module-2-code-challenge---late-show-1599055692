@@ -1,0 +1,11 @@
+<h1><%= @guest.name %></h1>
+
+<p><%= @guest.name %> has appeared in the following episodes:</p>
+<ul>
+  <% @guest.sort_appearances_by_rating.each do |appearance| %>
+
+  <li>Episode <%= appearance.episode.number %>, aired on 
+  <%= link_to appearance.episode.date.strftime("%B %d, %Y"), episode_path(appearance.episode) %> 
+  (appearance rated <%= appearance.rating %>/5)</li>
+  <% end %>
+</ul>

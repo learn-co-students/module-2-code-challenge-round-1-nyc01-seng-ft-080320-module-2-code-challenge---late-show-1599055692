@@ -1,0 +1,32 @@
+<%= form_for @appearance do |f| %>
+
+  <!-- NOTE: As in AppearancesController, I left this commented out code here to demonstrate 
+  how I would do the validations using flash[:my_errors]. However, since that strategy wasn't 
+  keeping the choice of attributes on redirect, I decided to use render :new instead.
+
+  Additionally, in the feature demo, it seemed to be using the render :new strategy as well 
+  (when showing the errors, the url is /appearances, not /appearances/new).
+
+  <% if flash[:my_errors] %>
+    <% flash[:my_errors].each do |error| %>
+     <p><%= error %></p>
+    <% end %>
+  <% end %> -->
+
+  <% if @appearance.errors.any? %>
+    <ul>
+    <% @appearance.errors.full_messages.each do |error| %>
+      <li><%= error %>!</li>
+    <% end %> 
+    </ul>
+  <% end %> 
+
+  <%= f.label "Guest:" %>
+  <%= f.collection_select :guest_id, Guest.all, :id, :name %><br>
+  <%= f.label "Episode number:" %>
+  <%= f.collection_select :episode_id, Episode.all, :id, :number %><br>
+  <%= f.label "Rating:" %>
+  <%= f.number_field :rating %><br>
+
+  <%= f.submit %>
+<% end %>
