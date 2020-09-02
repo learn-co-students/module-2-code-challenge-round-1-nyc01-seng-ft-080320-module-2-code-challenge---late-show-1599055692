@@ -6,7 +6,7 @@ class Guest < ApplicationRecord
         list_appearances = self.appearances
 
         list_appearances.sort_by do |appearance|
-            appearance.episode.avg_rating
+            appearance.rating
         end.reverse
     end
 end
