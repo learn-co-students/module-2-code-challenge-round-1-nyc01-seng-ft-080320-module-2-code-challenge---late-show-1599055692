@@ -1,0 +1,19 @@
+<h1> Apperance Form </h1>
+
+<% if flash[:my_errors] %>
+    <% flash[:my_errors].each do |error| %>
+        <p><%= error %></p>
+    <% end %>
+<% end %>
+
+<%= form_for @apperance do |f| %>
+    <p><%= f.label :guest %> </p>
+    <p><%= f.collection_select :guest_id, @guests, :id, :name%>
+
+    <p><%= f.label :episode %> </p>
+    <p><%= f.collection_select :episode_id, @episodes, :id, :number%>
+    
+    <p><%= f.label :rating %> </p>
+    <p><%= f.text_field :rating %> </p>
+    <%= f.submit %>
+<% end %>
