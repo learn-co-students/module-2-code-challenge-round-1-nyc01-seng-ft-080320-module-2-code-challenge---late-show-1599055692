@@ -1,0 +1,15 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <%= error %>
+    <%end%>
+<%end%>
+
+<h1>CREATE NEW APPEARANCE</h1>
+
+<%=form_for @appearance do |f| %>
+    <%= f.collection_select :guest_id, Guest.all, :id, :name%>
+    <%= f.collection_select :episode_id, Episode.all, :id, :number%>
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+    <%= f.submit %>
+<% end %>
