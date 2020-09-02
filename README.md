@@ -87,15 +87,15 @@ To log that a specific Guest appeared on a certain Episode, we need to create th
 - Enter a numeric rating
 - Submit the form -->
 
-After submitting the form, the user should be redirected to the selected episode's show page.
+<!-- After submitting the form, the user should be redirected to the selected episode's show page. -->
 
 ### 3. Episode Show Page
 
-On the episode show page, a user should see:
+<!-- On the episode show page, a user should see:
 
 - Episode date
 - A list of the guests who were on that episode
-- Each guest's name should link to the Guest Show page
+- Each guest's name should link to the Guest Show page -->
 
 ### 4. Guest Show Page Episode links
 
@@ -109,12 +109,12 @@ For each Episode, show the:
 Each Episode date should link to the show page for that Episode.
 
 ### 5. Appearance Rating Validation
-
+<!-- 
 The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` are okay).
 
 - Add a validation to ensure that the rating is between 1 and 5.
 - Add handling for this error to the Appearance create action.
-- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
+- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating. -->
 
 ### 6. Advanced: Additional Appearance Validation
 

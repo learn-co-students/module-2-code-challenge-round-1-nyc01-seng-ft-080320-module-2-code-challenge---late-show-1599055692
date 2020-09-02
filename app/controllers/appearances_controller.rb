@@ -6,7 +6,13 @@ class AppearancesController < ApplicationController
 
     def create
         appearance = Appearance.create(appearance_params)
-        redirect_to episode_path(appearance.episode)
+
+        if appearance.valid?
+            redirect_to episode_path(appearance.episode)
+        else
+            flash[:errors] = appearance.errors.full_messages
+            redirect_to new_appearance_path
+        end
     end
 
     private
