@@ -8,3 +8,8 @@
         <li><%= link_to appearance.episode.date, episode_path(appearance.episode) %> <%= "Episode Number: #{appearance.episode.number} Rated: #{appearance.rating}"  %> </li>
     <% end %>
 </ul>
+
+
+<div class="bottom_link">
+<%= link_to 'All guests', guests_path %>
+</div>

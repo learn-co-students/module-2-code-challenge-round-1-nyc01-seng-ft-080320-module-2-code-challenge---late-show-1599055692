@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: cadetblue;
+    font-family: monospace;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-align: center;;
+}
+ 
+.bottom_link {
+    text-align: left;
+    padding-left: 20px;
+   
+}
+
+button {
+    border-radius: 15px;
+    border-color: blue; 
+    box-shadow: 0 8px 16px 0;   
+}
+
+select, input {
+     border-radius: 10px;
+ }
+ 
+a:hover {
+     font-size: 15px;
+     
+ }
+ 
+li {
+     list-style-type: square;
+     line-height: 18px;
+     list-style-position: inside;
+ }
