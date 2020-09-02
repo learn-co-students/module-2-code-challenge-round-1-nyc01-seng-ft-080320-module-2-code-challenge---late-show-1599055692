@@ -2,9 +2,11 @@
 <p>Guest Name: <%=@guest.name%></p>
 <ul>
     <%@guest.episodes.each do |e|%>
-    <li><%= link_to  e.date, episode_path(e) %>
-        Ratings: <%e.appearances.each do |r|%><br>
-            <%=r.rating%>/5
+    <li>Episode number: <%=e.number%> - Date: <%= link_to  e.date, episode_path(e) %> <br>
+        Ratings: <%e.appearances.select do |a|%>
+            <%a.guest == @guest%>
+            <%end.each do |e|%>
+            <%= e.rating%>/5<br>
             <%end%>
     </li>
     <%end%>
