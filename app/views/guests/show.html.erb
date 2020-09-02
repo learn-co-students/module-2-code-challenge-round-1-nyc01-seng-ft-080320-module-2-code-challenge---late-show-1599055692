@@ -1,0 +1,7 @@
+<h1><%= @guest.name %>'s Profile Page:</h1>
+<h3>Episodes Appearances:</h3>
+<ul>
+<% @guest.appearances.each do |a| %>
+    <li> <%= "Date: #{a.episode.date} Rating: #{a.rating}" %></li>
+<% end %>
+</ul>
