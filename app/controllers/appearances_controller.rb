@@ -7,6 +7,7 @@ class AppearancesController < ApplicationController
   def create
     appearance = Appearance.create(appearance_params)
     if appearance.valid?
+        appearance.save
       redirect_to guests_path
     else
       flash[:errors] = appearance.errors.full_messages

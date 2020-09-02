@@ -8,5 +8,4 @@ class EpisodesController < ApplicationController
     @episode = Episode.find(params[:id])
   end
 
-  
 end

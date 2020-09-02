@@ -4,6 +4,11 @@
     <p><%= link_to guest.name, guest_path(guest) %></p>
     <%end%>
     <br>
+<h3>Average Rating: <% array = [] %>
+    <% @episode.appearances.map do |app| %>
+    <% array << app.rating  %>
+    <% end %>
+    <%= array.sum / array.size %></h3>
     <br>
     <br>
 <%= link_to "Episode Index", episodes_path %>
