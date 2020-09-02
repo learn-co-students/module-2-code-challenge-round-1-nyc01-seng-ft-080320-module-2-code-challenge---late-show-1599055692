@@ -1,4 +1,6 @@
 # Rails Code Challenge - Late Show
+Islom Mashanlo
+
 
 For this assessment, you'll be working with Late Night TV show domain.
 
