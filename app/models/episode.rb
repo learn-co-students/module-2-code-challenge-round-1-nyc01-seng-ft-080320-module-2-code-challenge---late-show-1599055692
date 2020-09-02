@@ -11,6 +11,4 @@ class Episode < ApplicationRecord
         end
         (total_rating / appearances.count).round(2)
     end
-
-
 end

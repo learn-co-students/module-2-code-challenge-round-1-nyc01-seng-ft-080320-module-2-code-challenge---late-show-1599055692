@@ -3,8 +3,9 @@
 <h3>Episodes Appeared In</h3>
 
 <ul>
-    <% @guest.appearances.each do |appearance| %>
-   <li>Episode: <%= link_to appearance.episode.date, episode_path(appearance.episode) %>
+    <% sorted = @guest.appearances.sort_by { |appearance| appearance.rating }.reverse %>
+    <% sorted.each do |appearance| %>
+    <li>Episode: <%= link_to appearance.episode.date, episode_path(appearance.episode) %>
     Rating: <%= appearance.rating %></li>
     <% end %>
 </ul>
