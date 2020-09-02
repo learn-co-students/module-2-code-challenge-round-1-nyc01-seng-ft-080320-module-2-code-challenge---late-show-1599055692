@@ -1,0 +1,8 @@
+<h1>Episode Info</h1>
+<p>Episode Date: <%=@episode.date%></p>
+<ul>
+    <%@episode.guests.each do |e|%>
+    <li><%= link_to e.name, guest_path(e) %></li>
+    <%end%>
+</ul>
+<%= button_to  "Go back", episodes_path, method: :get %>
