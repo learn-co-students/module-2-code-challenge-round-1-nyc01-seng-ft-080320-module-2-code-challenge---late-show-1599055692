@@ -5,3 +5,5 @@
     <li> <%= "Date: " %><%= link_to a.episode.date, episode_path(a.episode) %><%=  %><%= " Rating: #{a.rating}" %></li>
 <% end %>
 </ul>
+
+<p><%= button_to "ADD guests to shows", new_appearance_path, method: :get %></p>
