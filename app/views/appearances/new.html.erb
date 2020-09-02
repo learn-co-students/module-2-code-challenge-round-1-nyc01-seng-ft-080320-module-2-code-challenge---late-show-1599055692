@@ -11,12 +11,12 @@
 
 <%= form_for @appearance do |f| %>
 <%= f.label :guest %>
-<%= f.collection_select :guest_id, Guest.all, :id, :name %>
+<%= f.collection_select :guest_id, @guests.all, :id, :name %>
 <br>
 <br>
 
 <%= f.label :episode %>
-<%= f.collection_select :episode_id, Episode.all, :id, :number %>
+<%= f.collection_select :episode_id, @episodes.all, :id, :number %>
 <br>
 <br>
 
