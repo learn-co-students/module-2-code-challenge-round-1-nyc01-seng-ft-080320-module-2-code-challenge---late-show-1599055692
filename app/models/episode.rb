@@ -4,6 +4,10 @@ class Episode < ApplicationRecord
 
 
     def average_rating
+        if self.appearances.count != 0
         (self.appearances.sum{|a|a.rating} / self.appearances.count).to_f
+        else
+            0
+        end
     end
 end

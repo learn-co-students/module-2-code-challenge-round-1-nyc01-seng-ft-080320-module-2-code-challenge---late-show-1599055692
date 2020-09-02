@@ -5,3 +5,4 @@
     <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
   <% end %>
 </ul>
+<%= button_to  "New Appearance", new_appearance_path, method: :get %>
