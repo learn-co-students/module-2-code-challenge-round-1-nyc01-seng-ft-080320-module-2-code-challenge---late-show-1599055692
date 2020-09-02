@@ -1,0 +1,16 @@
+<h1><%= @guest.name %></h1>
+
+<h3>Episodes: </h3>
+<% if @guest.appearances.count > 0 %>
+    <ul>
+        <% @guest.appearances.each do |appearance| %>
+            <li><%= link_to "Episode #{appearance.episode.number}", episode_path(appearance.episode) %></li>
+            <ul>
+                <li>Aired on: <%= appearance.episode.date.strftime("%B %d, %Y") %></li>
+                <li>Appearace Rating: <%= appearance.rating %></li>
+            </ul>
+        <% end %>
+    </ul>
+<% else %>
+    <p>- Guest has not appeared on any episodes yet</p>
+<% end %>
