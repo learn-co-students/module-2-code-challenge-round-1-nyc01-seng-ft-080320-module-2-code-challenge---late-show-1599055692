@@ -1,12 +1,3 @@
-<% if flash[:errors] %>
-    <ul>
-        <h3>You have the following errors with submission: </h3>
-        <% flash[:errors].each do |msg| %>
-           <li> <%= msg %></li>
-        <% end %>
-    </ul>
-<% end %>
-
 
 
 <%= form_for @appearance do |f| %>
@@ -21,3 +12,14 @@
     <br>
     <%= f.submit %>
 <% end %>
+
+
+<% if flash[:errors] %>
+    <ul>
+        <h3>You have the following errors with submission: </h3>
+        <% flash[:errors].each do |msg| %>
+           <li style="color: red; font-weight: bold"> <%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
+

@@ -1,7 +1,8 @@
 <h1>Episode Number: <%= @episode.number %></h1>
 
 <h3>Airdate: <%= @episode.date %> </h3>
-
+<h4>Average Rating from all appearances:</h4>
+<p><%= @episode.average_rating %></p>
 <h3>Guests for that nights show:</h3>
 <ul>
     <% @episode.guests.each do |guest| %>
