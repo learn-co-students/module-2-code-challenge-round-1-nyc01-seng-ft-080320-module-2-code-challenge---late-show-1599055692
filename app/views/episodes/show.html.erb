@@ -1,0 +1,11 @@
+<h1>Episode: <%= @episode.number %></h1>
+<h3>Appeared on: <%= @episode.date %></h3>
+<b>Guest List:</b>
+<ul>
+<% @episode.guests.each do |g| %>
+    <li><%= link_to g.name, guest_path(g) %></li>
+<% end %>
+</ul>
+<b>Average episode rating:</b> <%= @episode.average_rating %><br><br>
+<%= button_to "Add new appearance", new_appearance_path, method: :get %><br>
+<%= button_to "All episodes", episodes_path, method: :get %>
