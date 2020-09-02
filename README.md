@@ -1,3 +1,4 @@
+#Alicia Javier
 # Rails Code Challenge - Late Show
 
 For this assessment, you'll be working with Late Night TV show domain.
@@ -14,7 +15,6 @@ In this repo, there is a Rails application with some features built out. Your jo
 - Validations
 
 ## Setup
-
 Before you begin coding your solution, clone this repo and then `cd` into it. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server.
 
 ## The Domain
