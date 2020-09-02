@@ -1,0 +1,25 @@
+<h1>Episode Profile:</h1>
+
+
+<div>
+    <table>
+        <tr>
+            <td>Episode number</td>
+            <td>:</td>
+            <td><%= @episode.number %></td>
+        </tr>
+        <tr>
+            <td>Episode date</td>
+            <td>:</td>
+            <td><%= @episode.date %></td>
+        </tr>
+        <tr>
+            <td>Hosted Guests</td>
+            <td>:</td>
+            <td><% @episode.guests.each do |guest| %><li><%= link_to guest.name, guest_path(guest)%></li>
+                <% end %>
+            </td>
+        </tr>
+
+    </table>
+</div>
