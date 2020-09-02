@@ -1,7 +1,7 @@
 <h1><%= @guest.name %>'s Profile Page:</h1>
 <h3>Episodes Appearances:</h3>
 <ul>
-<% @guest.appearances.each do |a| %>
+<% @sorted_list.each do |a| %>
     <li> <%= "Date: " %><%= link_to a.episode.date, episode_path(a.episode) %><%=  %><%= " Rating: #{a.rating}" %></li>
 <% end %>
 </ul>
