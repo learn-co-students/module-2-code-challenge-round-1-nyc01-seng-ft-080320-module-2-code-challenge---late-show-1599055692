@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200902142301) do
+ActiveRecord::Schema.define(version: 20200902152056) do
 
   create_table "appearances", force: :cascade do |t|
     t.integer "guest_id"
     t.integer "episode_id"
-    t.integer "rating"
+    t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
