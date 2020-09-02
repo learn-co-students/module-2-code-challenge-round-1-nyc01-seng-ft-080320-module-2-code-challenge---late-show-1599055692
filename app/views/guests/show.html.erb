@@ -2,7 +2,7 @@
 <h3>Episodes Appearances:</h3>
 <ul>
 <% @sorted_list.each do |a| %>
-    <li> <%= "Date: " %><%= link_to a.episode.date, episode_path(a.episode) %><%=  %><%= " Rating: #{a.rating}" %></li>
+    <li> <%= "Date: " %><%= link_to a.episode.date, episode_path(a.episode) %><%=  %><%= " Rating: #{a.rating} Episode-Number: #{a.episode.number}" %></li>
 <% end %>
 </ul>
 
