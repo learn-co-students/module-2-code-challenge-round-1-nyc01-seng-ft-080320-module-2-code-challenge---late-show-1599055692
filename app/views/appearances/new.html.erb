@@ -1,5 +1,14 @@
 <h1>Create New Appearance</h1>
 
+<% if flash[:errors] %>
+    <div style="color:red">
+        <% flash[:errors].each do |error| %>
+            <li><%= error %></li>
+        <% end %>
+    </div>
+    <hr>
+<% end %>
+
 <div>
     <%= form_for @appearance do |f| %>
         <table>
