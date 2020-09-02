@@ -4,6 +4,9 @@
 <h2> Date </h2> 
 <%= @episode.date %>
 
+<h3> Average Rating</h3>
+<%= @episode.average_rating %>
+
 <h3> Guests</h3>
 <% @episode.guests.each do |guest| %>
     <ul>
