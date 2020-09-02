@@ -1,0 +1,5 @@
+<h1><%= "Air date: #{@episode.date}" %></h1>
+<p> Featured guests: <p>
+<% @episode.guests.each do |guest| %><br>
+    <%= link_to guest.name, guest_path(guest) %><br>
+<% end%>
