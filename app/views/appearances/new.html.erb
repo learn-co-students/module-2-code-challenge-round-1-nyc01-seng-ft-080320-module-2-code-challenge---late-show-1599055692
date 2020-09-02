@@ -1,0 +1,28 @@
+<h1>Create New Appearance</h1>
+
+<div>
+    <%= form_for @appearance do |f| %>
+        <table>
+            <tr>
+                <td><%= f.label :episode %></td>
+                <td>:</td>
+                <td><%= f.collection_select :episode_id, @episodes, :id, :number %></td>
+            </tr>
+            <tr>
+                <td><%= f.label :guest %></td>
+                <td>:</td>
+                <td><%= f.collection_select :guest_id, @guests, :id, :name %></td>
+            </tr>
+            <tr>
+                <td><%= f.label :rating %></td>
+                <td>:</td>
+                <td><%= f.number_field :rating %></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><%= f.submit %></td>
+            </tr>
+        </table>
+    <% end %>
+</div>
