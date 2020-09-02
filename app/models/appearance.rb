@@ -3,5 +3,5 @@ class Appearance < ApplicationRecord
     belongs_to :guest
 
     validates :rating, numericality: {greater_than: 0, less_than: 6}
-    validates :episode_id, uniqueness: true
+    validates :guest_id, uniqueness: true
 end
