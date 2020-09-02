@@ -1,0 +1,22 @@
+<h1> New Appearance Form </h1>
+<hr>
+
+<%= form_for @appearance do |f| %>
+<%= f.label :guest %>
+<%= f.collection_select :guest_id, Guest.all, :id, :name %>
+<br>
+<br>
+
+<%= f.label :episode %>
+<%= f.collection_select :episode_id, Episode.all, :id, :number %>
+<br>
+<br>
+
+<%= f.label :rating %>
+<%= f.number_field :rating %>
+<br>
+<br>
+
+<%= f.submit  %>
+
+<% end %>
